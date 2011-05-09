@@ -111,7 +111,7 @@ namespace ArcadeRPG
 
 
         //***************************MISC*********************//
-        public const int LEVEL_TIME = 120;
+        public const int LEVEL_TIME = 240;
         public TimeSpan currTime = TimeSpan.FromSeconds(LEVEL_TIME); // grant the player a certain time per round
         // currTime will be 90 and count down each second, checking against 0 each second,  for each level
         public int hurt_time = 3000;

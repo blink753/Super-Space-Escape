@@ -46,6 +46,9 @@ namespace ArcadeRPG
             decision_matrix[(int)enemyType.BEETLE, (int)actionDecision.FLEE, (int)actionFactor.HL] = .7f; //Wants to run towards player
         
             //Insert Trooper stuff
+            decision_matrix[(int)enemyType.TROOPER, (int)actionDecision.FLEE, (int)actionFactor.HL] = .8f;
+            decision_matrix[(int)enemyType.TROOPER, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .3f;
+
         }
 
 
