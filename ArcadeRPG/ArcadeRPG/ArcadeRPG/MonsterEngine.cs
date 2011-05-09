@@ -47,7 +47,11 @@ namespace ArcadeRPG
         
             //Insert Trooper stuff
             decision_matrix[(int)enemyType.TROOPER, (int)actionDecision.FLEE, (int)actionFactor.HL] = .8f;
-            decision_matrix[(int)enemyType.TROOPER, (int)actionDecision.ADVANCE, (int)actionFactor.DP] = .3f;
+            decision_matrix[(int)enemyType.TROOPER, (int)actionDecision.FIRE, (int)actionFactor.DP] = .4f;
+            decision_matrix[(int)enemyType.TROOPER, (int)actionDecision.FIRE, (int)actionFactor.AL] = .2f;
+            decision_matrix[(int)enemyType.TROOPER, (int)actionDecision.ALIGN, (int)actionFactor.AL] = .4f;
+
+            //decision_matrix[(int)enemyType.TROOPER, (int)actionDecision.IDLE, (int)actionFactor.DP] = .6f;
 
         }
 
@@ -145,7 +149,7 @@ namespace ArcadeRPG
                 //Flee in the Y direction from the player
                 if (dist_y <= 0)
                 {
-                    mons_tile_yr += r.Next(-5, -10);
+                    mons_tile_yr += r.Next(-10, -5);
                     mons_tile_xr += r.Next(-10, 10);
                     if (mons_tile_yr < 0)
                         mons_tile_yr = 0;
